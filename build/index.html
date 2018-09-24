@@ -1,36 +1,370 @@
 <!doctype html>
 <html ⚡>
-  <head>
-    <meta charset="utf-8">
-    <title>Sample document</title>
-    <link rel="canonical" href="./index.html">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "NewsArticle",
-      "headline": "Article headline",
-      "image": [
-        "thumbnail1.jpg"
-      ],
-      "datePublished": "2015-02-05T08:00:00+08:00"
-    }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <link rel="stylesheet" href="css/app.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-  </head>
-  <body>
-    <h1>Sample document</h1>
-    <p>
-      Some text
-    </p>
-    <!-- <amp-ad width=300 height=250
-        type="a9"
-        data-aax_size="300x250"
-        data-aax_pubname="test123"
-        data-aax_src="302">
-    </amp-ad> -->
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Sample document</title>
+  <link rel="canonical" href="./regular-html-version.html">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "headline": "Article headline",
+    "image": [
+      "thumbnail1.jpg"
+    ],
+    "datePublished": "2015-02-05T08:00:00+08:00"
+  }
+  </script>
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+  <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+  <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+  <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+  <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+  <!-- <script async custom-element="amp-video-iframe" src="https://cdn.ampproject.org/v0/amp-video-iframe-0.1.js"></script> -->
+  <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <!-- begin sidebar  -->
+  <amp-sidebar id="sidebar"
+    width="100vw"
+    layout="nodisplay"
+    side="left"
+    class="sidebar">
+    <amp-img class="amp-close-image"
+      src="img/close.svg"
+      width="20"
+      height="20"
+      alt="close sidebar"
+      on="tap:sidebar.close"
+      role="button"
+      tabindex="0"></amp-img>
+
+    <nav toolbar="(min-width: 981px)"
+      toolbar-target="target-element-lang"
+      class="sidebar__language">
+      <ul class="language-list">
+        <li class="language-list__item">
+          <a class="language-list__link  is-active" href="#">Укр</a>
+        </li>
+        <li class="language-list__item">
+          <a class="language-list__link" href="#">Рус</a>
+        </li>
+      </ul>
+    </nav>
+
+    <nav class="sidebar__menu">
+        <ul class="main-menu">
+            <li class="main-menu__item"><a class="main-menu__link" href="#">Новини</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="#">Публікації</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="#">Колонки</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="#">Інтерв'ю</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="#">Графіка</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="#">Фото і відео</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="#">Блоги</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="#">Архів</a></li>
+        </ul>
+    </nav>
+
+    <nav class="sidebar__all-menu">
+     <ul class="all-menu">
+      <li class="all-menu__item">
+        <a href="#" class="all-menu__link is-active">Українська правда</a>
+      </li>
+      <li class="all-menu__item">
+        <a href="#" class="all-menu__link">Економічна правда</a>
+      </li>
+      <li class="all-menu__item">
+        <a href="#" class="all-menu__link">Життя</a>
+      </li>
+      <li class="all-menu__item">
+        <a href="#" class="all-menu__link">Європейська правда</a>
+      </li>
+      <li class="all-menu__item">
+        <a href="#" class="all-menu__link">Блоги</a>
+      </li>
+      <li class="all-menu__item">
+        <a href="#" class="all-menu__link">Історична правда</a>
+      </li>
+      <li class="all-menu__item">
+        <a href="#" class="all-menu__link">ТаблоID</a>
+      </li>
+      <li class="all-menu__item">
+        <a href="#" class="all-menu__link">БЖ</a>
+      </li>
+      <li class="all-menu__item">
+        <a href="#" class="all-menu__link">Доступ до правди</a>
+      </li>
+      <li class="all-menu__item">
+        <a href="#" class="all-menu__link">Форум</a>
+      </li>
+      <li class="all-menu__item">
+       <strong><a href="#" class="all-menu__link">Вибори - 2019</a></strong>
+       </li>
+     </ul>
+    </nav>
+  </amp-sidebar>
+  <!-- end sidebar -->
+
+  <!-- begin header  -->
+  <header class="header">
+    <div class="header__burger">
+      <button on="tap:sidebar.toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 32 32" height="32px" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve"><g id="Menu"><path d="M1,7h30c0.552,0,1-0.448,1-1c0-0.552-0.448-1-1-1H1C0.448,5,0,5.448,0,6C0,6.552,0.448,7,1,7z" fill="#ffffff"/><path d="M31,15H1c-0.552,0-1,0.448-1,1c0,0.552,0.448,1,1,1h30c0.552,0,1-0.448,1-1C32,15.448,31.552,15,31,15z" fill="#ffffff"/><path d="M31,25H1c-0.552,0-1,0.448-1,1c0,0.552,0.448,1,1,1h30c0.552,0,1-0.448,1-1C32,25.448,31.552,25,31,25z" fill="#ffffff"/></g><g/><g/><g/><g/><g/><g/></svg>
+      </button>
+    </div>
+
+    <!-- begin header__lang  -->
+    <div class="header__lang" id="target-element-lang">
+    </div>
+    <!-- end header__lang -->
+
+    <!-- begin header__search  -->
+    <div class="header__search">
+      <button>
+        <svg style="enable-background:new 0 0 16 16;" version="1.1" viewBox="0 0 16 16" xml:space="preserve"><path fill="#ffffff" d="M11,0C8.243,0,6,2.243,6,5c0,1.198,0.441,2.284,1.146,3.147l-7,7l0.707,0.707l7-7C8.716,9.559,9.802,10,11,10  c2.757,0,5-2.243,5-5S13.757,0,11,0z M11,9C8.791,9,7,7.209,7,5c0-2.209,1.791-4,4-4s4,1.791,4,4C15,7.209,13.209,9,11,9z"/></svg>
+      </button>
+    </div>
+    <!-- end header__search -->
+
+    <!-- begin header__title  -->
+    <div class="header__title">
+      Українська правда
+    </div>
+    <!-- end header__title -->
+  </header>
+  <!-- end header -->
+
+  <!-- begin img  -->
+  <div class="hero">
+    <amp-img src="img/bg-img.jpg" layout="responsive" alt="Welcome" height="1000" width="1680"></amp-img>
+<div class="hero__wide-content">
+    <div class="hero__content  container">
+      <div class="hero__descr">
+        <h1 class="hero__title">
+          Хроніка 7 квітня. Юрі — волю, політикам — бочки
+        </h1> 
+        <a class="hero__link" href="#">Рустем Халілов</a>
+      </div> 
+
+      <div class="hero__author">
+        Владислав Скобельський, для УП
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- end img -->
+  
+  <!-- begin content  -->
+  <div class="content">
+
+    <div class="content__info  container">
+      <time class="content__time  time-news" datetime="2017-04-07">П'ятниця, 7 квітня 2017, 09:00</time>
+      <div class="content__views">22 перегляди</div>
+    </div>
+
+    <div class="content__category  sect-category">
+      <div class="container-custom">
+        <div class="sect-category"> 
+          <h3 class="sect-category__title  title-news">Найцікавіше:</h3> 
+          <a class="title-news" href="#">2013. Луценко на волі </a>
+          <a class="title-news" href="#">2014. Палають Харків, Донецьк, Луганськ та Миколаїв </a>
+          <a class="title-news" href="#">2015. Україна отримала Суспільне мовлення</a> 
+        </div>
+      </div>
+    </div>
+
+    <!-- begin news  -->
+    <article class="content__news  news">
+      <div class="container-custom">
+        <h3 class="news__title  title-news">2001, суббота</h3>
+        <div class="news__descr">
+          <p> – Опозиція провела збори Форуму національного порятунку, на якому вирішили готуватися до всеукраїнського референдуму про недовіру президентові Кучмі.</p>
+
+          <p>Був на Форумі і посол США Карлос Паскуаль, який агітував за Ющенка, і напередодні звіту українського уряду наголосив на необхідності відновлення консенсусу між урядом, парламентом та президентом.</p>
+
+        </div>
+      </div>
+    </article>
+    <!-- end news -->
+
+    <!-- begin news  -->
+    <article class="content__news  news">
+      <div class="container-custom">
+        <h3 class="news__title  title-news">2003, понеділок</h3>
+        <div class="news__descr">
+          <p>– – Міністр економіки Валерій Хорошковський і глава МЗС Анатолій Зленко виступили зі спільною заявою, що формування Єдиного економічного простору країн СНД не повинне перешкоджати якнайшвидшому вступу України до СОТ</p>
+
+          <p>У лютому Путін, Кучма, Лукашенко й Назарбаєв домовилися створити Організацію регіональної інтеграції, яка повинна функціонувати на базі "Єдиного економічного простору". В Росії заявили, що й вступ до СОТ цих країн має бути синхронізованим.</p>
+        </div>
+      </div>
+    </article>
+    <!-- end news -->
+
+    <!-- begin news  -->
+    <article class="content__news  news">
+      <div class="container-custom">
+        <h3 class="news__title  title-news">2013, неділя</h3>
+        <div class="news__descr">
+          <p>– Екс-глава МВС <strong>Юрій Луценко</strong> <a href="#">вийшов на волю</a>.</p>
+
+          <div class="news__media">
+            <amp-youtube width="480"
+              height="270"
+              layout="responsive"
+              data-videoid="OEsOnYW6tTw">
+            </amp-youtube>
+          </div>
+
+
+          <p>Янукович підписав указ про помилування Луценка та екс-міністра охорони навколишнього природного середовища Георгія Філіпчука.</p>
+
+          <p>У цей день опозиція проводила акцію "Вставай, Україно!" в Києві. Луценко на акцію не встиг, але виступив перед її учасниками по телефону.</p>
+
+        
+
+        </div>
+      </div>
+    </article>
+    <!-- end news -->
+
+    <!-- begin news  -->
+    <article class="content__news  news">
+      <div class="container-custom">
+      <h3 class="news__title  title-news">2014, понеділок</h3>
+      <div class="news__descr">
+        <p>– У Харкові сепаратисти увійшли у вестибюль обладміністрації й оголосили рішення про<a href="#"> створення Харківської народної республіки</a>. До вечора з будівлі їх витіснили, але вони оточили ХОДА і почали палити шини.</p>
+
+        <div class="news__media">
+          <amp-img src="img/doneck.jpg" layout="responsive" alt="doneck" height="920" width="690"></amp-img>
+        </div>
+          <p>– У Миколаєві прихильники проросійських сепаратистських мітингів зібралися біля ОДА. Увечері вони зіткнулися з активістами Самооборони Майдану та Народного ополчення, які витіснили їх з території.</p>
+        <p>– Увечері в.о. президента Олександр Турчинов заявив про підготовку до антитерористичних заходів.</p>
+
+        <div class="news__media">  
+          <amp-iframe width="640"
+            title="Турчинов обіцяє діяти проти сепаратистів «адекватно і рішуче»"
+            height="360"
+            layout="responsive"
+            sandbox="allow-scripts allow-same-origin allow-popups"
+            allowfullscreen
+            frameborder="0"
+            src="https://www.radiosvoboda.org/embed/player/0/25324092.html?type=video">
+          </amp-iframe>
+        </div>
+          <p>– У ніч з 6 на 7 квітня в Криму російській військовий через особисту неприязнь застрелив українського офіцера, майора Станіслава Карачевського.</p>
+      </div>
+    </div>
+    </article>
+    <!-- end news -->
+
+    <!-- begin news  -->
+    <article class="content__news  news">
+      <div class="container-custom">
+      <h3 class="news__title  title-news">2015, вівторок</h3>
+      <div class="news__descr">
+        <p>– В Україні стартувало <a href="#">Суспільне мовлення</a>. Президент Петро Порошенко підписав відповідний закон перед журналістами, після чого гендиректор НТКУ <strong>Зураб Аласанія</strong> запустив Суспільне мовлення в прямий ефір.</p>
+        <p>– Парламент визнав українських добровольців <a href="#">учасниками бойових дій</a>. Також Верховна Рада надала право встановлення статусу інваліда війни безпосереднім учасникам АТО.</p>
+      </div>
+    </div>
+    </article>
+    <!-- end news -->
+
+
+    <!-- begin news  -->
+    <article class="content__news  news">
+      <div class="container-custom">
+      <h3 class="news__title  title-news">2016, четвер</h3>
+      <div class="news__descr">
+
+        <p>– На <a href="#">референдумі в Нідерландах</a> більша частина з тих громадян, що прийшли на виборчі дільниці, проголосувала проти ратифікації Угоди про асоціацію Україна-ЄС. "Якщо підсумки референдуму залишаться такими, як сьогодні, то ми не можемо продовжити ратифікацію Угоди про асоціацію з Україною", – заявив прем'єр-міністр Нідерландів Марк Рютте.</p>
+
+        <p>– Екс-нардеп від БЮТ <a href="#"><strong>Віктор Лозінський</strong> вийшов</a> із в'язниці. Суд застосував до нього умовно-дострокове звільнення. Лозинському перерахували термін за "<a href="#">Законом Савченко</a>".</p>
+
+
+      </div>
+    </div>
+    </article>
+    <!-- end news -->
+
+
+    <!-- begin sale-sect  -->
+    <section class="content__list-news">
+      <div class="list-news  container-custom">
+        <h3 class="list-news__title  title-default  title-default--decor">По темі</h3>
+        <amp-list width="auto"
+          height="100"
+          layout="fixed-height"
+          src="./js/data_news_similar.json">
+          <template type="amp-mustache">
+            <div>
+              <h3 class="title-news">{{title}}</h3>
+              <time class="time-news">{{time}}</time>
+            </div>
+          </template>
+          <div overflow
+              role="button"
+              aria-label="Show more"
+              class="list-overflow ampstart-btn caps">
+              Show more
+            </div>
+        </amp-list>
+      </div>
+    </section>
+    <!-- end sale-sect -->
+
+
+  </div>
+  <!-- end content -->
+
+
+<!-- begin sect-custom  -->
+<section class="sect-custom">
+  <div class="container">
+    <div class="imglist">
+      <h3 class="sect-custom__title  title-default">Вибір редактора</h3>
+      <amp-list width="auto"
+        height="100"
+        layout="fixed-height"
+        src="./js/data_news_redactor.json">
+        <template type="amp-mustache">
+          <div class="news">
+            <div><amp-img src="{{url}}" layout="responsive" alt="{{title}}" height="533" width="830"></amp-img></div>
+            <h3 class="news__title  title-news">{{title}}</h3>
+            <div class="time-news">{{descr}}</div>
+          </div>
+        </template>
+        <div overflow
+            role="button"
+            aria-label="Show more"
+            class="list-overflow ampstart-btn caps">
+            Show more
+          </div>
+      </amp-list>
+    </div>
+  </div>
+</section>
+<!-- end sect-custom -->
+
+
+<footer class="footer"> 
+  <div class="container">
+
+
+    <div> 
+      <div class="footer__info"> 
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora vitae blanditiis voluptate sint quidem pariatur doloremque dolorum aliquam, explicabo quaerat.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus maxime optio libero sit dolor! Porro illum deleniti quisquam nostrum saepe.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus maxime optio libero sit dolor! Porro illum deleniti quisquam nostrum saepe.</p>
+      </div> 
+    </div>  
+
+</div>
+</footer>
+
+</body>
 </html>
