@@ -60,11 +60,6 @@ html {
   -webkit-box-sizing: inherit;
           box-sizing: inherit; }
 
-@media (prefers-reduced-motion: reduce) {
-  * {
-    -webkit-transition: none !important;
-    transition: none !important; } }
-
 body {
   color: #fff; }
 
@@ -154,14 +149,13 @@ button {
     bottom: 0;
     width: 100%;
     color: #ffffff;
-    font-size: 38px; }
+    font-size: 28px; }
   .hero__link {
     color: #ffffff;
     text-decoration: none; }
   .hero__author {
     float: right;
-    margin-top: 3px;
-    font-size: 9px;
+    font-size: 12px;
     line-height: 1.2;
     text-transform: uppercase; }
 
