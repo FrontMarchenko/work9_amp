@@ -130,7 +130,7 @@
         font-size: 18px;
         text-align: center; }
     
-    .all-menu {
+    .all-menu-additional {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -138,9 +138,9 @@
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column; }
-      .all-menu__item {
+      .all-menu-additional__item {
         padding: 10px 0 10px 0; }
-      .all-menu__link {
+      .all-menu-additional__link {
         display: block;
         color: #222;
         font-size: 1.3em;
@@ -159,25 +159,28 @@
         bottom: 0;
         width: 100%;
         color: #ffffff;
-        font-size: 18px; }
+        }
       .hero__link {
         color: #ffffff;
         text-decoration: none; }
+        .hero__descr{
+          font-size: 12px;
+        }
       .hero__author {
         float: right;
         font-size: 9px;
         text-transform: uppercase; }
     
-    .content {
+    .main-content {
       padding: 10px; }
-      .content__news {
+      .main-content__news {
         margin-bottom: 40px; }
-      .content__category {
+      .main-content__category {
         max-width: 750px;
         margin-bottom: 30px; }
-      .content__list-news {
+      .main-content__list-news {
         margin-bottom: 40px; }
-      .content__info {
+      .main-content__info {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -186,7 +189,7 @@
                 justify-content: space-between;
         width: 95%;
         padding: 18px 0 28px 0; }
-      .content__views {
+      .main-content__views {
         color: #888;
         font-size: 13px;
         line-height: 1.2; }
@@ -240,10 +243,10 @@
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column; }
-      .main-menu__item {
+      .all-menu-main__item {
         padding: 12px 0 10px 0;
         border-top: #d0d0d0 1px solid; }
-      .main-menu__link {
+      .all-menu-main__link {
         display: block;
         color: #222;
         font-size: 18px;
@@ -275,7 +278,9 @@
         display: grid;
         grid-gap: 12px;
         grid-template-columns: 1fr 1fr 1fr 1fr; }
-    
+        @media only screen and (max-width: 320px) {
+        .select-editor .imglist [role=list] {
+        grid-template-columns: 1fr; } }
     .sect-category {
       margin-left: auto;
       margin-right: auto;
@@ -294,13 +299,13 @@
         color: #222; }
         .sidebar a:hover, .sidebar a.is-active {
           color: #900022; }
-      .sidebar__menu {
+      .all-menu-main {
         width: 70%;
         margin-bottom: 20px;
         margin-left: auto;
         padding-top: 200px;
         font-size: 18px; }
-      .sidebar__all-menu {
+      .all-menu-additional {
         width: 70%;
         margin-bottom: 10px;
         margin-left: auto; }
@@ -426,56 +431,55 @@
       </ul>
     </nav>
 
-    <nav class="sidebar__menu">
-        <ul class="main-menu">
-            <li class="main-menu__item"><a class="main-menu__link" href="#">Новини</a></li>
-            <li class="main-menu__item"><a class="main-menu__link" href="#">Публікації</a></li>
-            <li class="main-menu__item"><a class="main-menu__link" href="#">Колонки</a></li>
-            <li class="main-menu__item"><a class="main-menu__link" href="#">Інтерв'ю</a></li>
-            <li class="main-menu__item"><a class="main-menu__link" href="#">Графіка</a></li>
-            <li class="main-menu__item"><a class="main-menu__link" href="#">Фото і відео</a></li>
-            <li class="main-menu__item"><a class="main-menu__link" href="#">Блоги</a></li>
-            <li class="main-menu__item"><a class="main-menu__link" href="#">Архів</a></li>
-        </ul>
-    </nav>
 
-    <nav class="sidebar__all-menu">
-     <ul class="all-menu">
-      <li class="all-menu__item">
-        <a href="#" class="all-menu__link is-active">Українська правда</a>
+        <ul class="all-menu-main">
+            <li class="all-menu-main__item"><a class="all-menu-main__link" href="#">Новини</a></li>
+            <li class="all-menu-main__item"><a class="all-menu-main__link" href="#">Публікації</a></li>
+            <li class="all-menu-main__item"><a class="all-menu-main__link" href="#">Колонки</a></li>
+            <li class="all-menu-main__item"><a class="all-menu-main__link" href="#">Інтерв'ю</a></li>
+            <li class="all-menu-main__item"><a class="all-menu-main__link" href="#">Графіка</a></li>
+            <li class="all-menu-main__item"><a class="all-menu-main__link" href="#">Фото і відео</a></li>
+            <li class="all-menu-main__item"><a class="all-menu-main__link" href="#">Блоги</a></li>
+            <li class="all-menu-main__item"><a class="all-menu-main__link" href="#">Архів</a></li>
+        </ul>
+
+
+  
+     <ul class="all-menu-additional">
+      <li class="all-menu-additional__item">
+        <a href="#" class="all-menu-additional__link is-active">Українська правда</a>
       </li>
-      <li class="all-menu__item">
-        <a href="#" class="all-menu__link">Економічна правда</a>
+      <li class="all-menu-additional__item">
+        <a href="#" class="all-menu-additional__link">Економічна правда</a>
       </li>
-      <li class="all-menu__item">
-        <a href="#" class="all-menu__link">Життя</a>
+      <li class="all-menu-additional__item">
+        <a href="#" class="all-menu-additional__link">Життя</a>
       </li>
-      <li class="all-menu__item">
-        <a href="#" class="all-menu__link">Європейська правда</a>
+      <li class="all-menu-additional__item">
+        <a href="#" class="all-menu-additional__link">Європейська правда</a>
       </li>
-      <li class="all-menu__item">
-        <a href="#" class="all-menu__link">Блоги</a>
+      <li class="all-menu-additional__item">
+        <a href="#" class="all-menu-additional__link">Блоги</a>
       </li>
-      <li class="all-menu__item">
-        <a href="#" class="all-menu__link">Історична правда</a>
+      <li class="all-menu-additional__item">
+        <a href="#" class="all-menu-additional__link">Історична правда</a>
       </li>
-      <li class="all-menu__item">
-        <a href="#" class="all-menu__link">ТаблоID</a>
+      <li class="all-menu-additional__item">
+        <a href="#" class="all-menu-additional__link">ТаблоID</a>
       </li>
-      <li class="all-menu__item">
-        <a href="#" class="all-menu__link">БЖ</a>
+      <li class="all-menu-additional__item">
+        <a href="#" class="all-menu-additional__link">БЖ</a>
       </li>
-      <li class="all-menu__item">
-        <a href="#" class="all-menu__link">Доступ до правди</a>
+      <li class="all-menu-additional__item">
+        <a href="#" class="all-menu-additional__link">Доступ до правди</a>
       </li>
-      <li class="all-menu__item">
-        <a href="#" class="all-menu__link">Форум</a>
+      <li class="all-menu-additional__item">
+        <a href="#" class="all-menu-additional__link">Форум</a>
       </li>
-      <li class="all-menu__item">
-       <strong><a href="#" class="all-menu__link">Вибори - 2019</a></strong>
+      <li class="all-menu-additional__item">
+       <strong><a href="#" class="all-menu-additional__link">Вибори - 2019</a></strong>
        </li>
      </ul>
-    </nav>
   </amp-sidebar>
 
 
@@ -520,14 +524,14 @@
   </div>
 
   
-  <div class="content">
+  <div class="main-content">
 
-    <div class="content__info  container">
-      <time class="content__time  time-news" datetime="2017-04-07">П'ятниця, 7 квітня 2017, 09:00</time>
-      <div class="content__views">22 перегляди</div>
+    <div class="main-content__info  container">
+      <time class="main-content__time  time-news" datetime="2017-04-07">П'ятниця, 7 квітня 2017, 09:00</time>
+      <div class="main-content__views">22 перегляди</div>
     </div>
 
-    <div class="content__category  sect-category">
+    <div class="main-content__category  sect-category">
       <div class="container-custom">
         <div class="sect-category"> 
           <h3 class="sect-category__title  title-news">Найцікавіше:</h3> 
@@ -538,7 +542,7 @@
       </div>
     </div>
 
-    <article class="content__news  news">
+    <article class="main-content__news  news">
       <div class="container-custom">
         <h3 class="news__title  title-news">2001, суббота</h3>
         <div class="news__descr">
@@ -550,7 +554,7 @@
       </div>
     </article>
 
-    <article class="content__news  news">
+    <article class="main-content__news  news">
       <div class="container-custom">
         <h3 class="news__title  title-news">2003, понеділок</h3>
         <div class="news__descr">
@@ -561,7 +565,7 @@
       </div>
     </article>
 
-    <article class="content__news  news">
+    <article class="main-content__news  news">
       <div class="container-custom">
         <h3 class="news__title  title-news">2013, неділя</h3>
         <div class="news__descr">
@@ -587,7 +591,7 @@
     </article>
 
 
-    <article class="content__news  news">
+    <article class="main-content__news  news">
       <div class="container-custom">
       <h3 class="news__title  title-news">2014, понеділок</h3>
       <div class="news__descr">
@@ -616,7 +620,7 @@
     </article>
 
 
-    <article class="content__news  news">
+    <article class="main-content__news  news">
       <div class="container-custom">
       <h3 class="news__title  title-news">2015, вівторок</h3>
       <div class="news__descr">
@@ -627,7 +631,7 @@
     </article>
 
 
-    <article class="content__news  news">
+    <article class="main-content__news  news">
       <div class="container-custom">
       <h3 class="news__title  title-news">2016, четвер</h3>
       <div class="news__descr">
@@ -641,13 +645,13 @@
     </div>
     </article>
 
-    <section class="content__list-news">
+    <section class="main-content__list-news">
       <div class="list-news  container-custom">
         <h3 class="list-news__title  title-default  title-default--decor">По темі</h3>
         <amp-list width="auto"
           height="100"
           layout="fixed-height"
-          src="./js/data_news_similar.json">
+          src="js/JSON-subject.json">
           <template type="amp-mustache">
             <div>
               <h3 class="title-news">{{title}}</h3>
@@ -676,12 +680,12 @@
       <amp-list width="auto"
         height="100"
         layout="fixed-height"
-        src="./js/JSON-editor.json">
+        src="js/JSON-editor.json">
         <template type="amp-mustache">
           <div class="news">
             <div><amp-img src="{{url}}" layout="responsive" alt="{{title}}" height="533" width="830"></amp-img></div>
             <h3 class="news__title  title-news">{{title}}</h3>
-            <div class="time-news">{{descr}}</div>
+            <div class="time-news">{{time}}</div>
           </div>
         </template>
         <div overflow
