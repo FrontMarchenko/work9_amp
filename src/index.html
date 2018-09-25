@@ -1,6 +1,5 @@
 <!doctype html>
 <html ⚡>
-
 <head>
   <meta charset="utf-8">
   <title>Sample document</title>
@@ -166,9 +165,7 @@
         text-decoration: none; }
       .hero__author {
         float: right;
-        margin-top: 3px;
         font-size: 9px;
-        line-height: 1.2;
         text-transform: uppercase; }
     
     .content {
@@ -269,14 +266,14 @@
     .news__media {
       margin-bottom: 15px; }
     
-    .sect-custom {
+    .select-editor {
       padding: 50px 0 100px 0;
       background-color: #f3f3f3; }
-      .sect-custom__title {
+      .select-editor__title {
         margin-bottom: 15px; }
-      .sect-custom .imglist [role=list] {
+      .select-editor .imglist [role=list] {
         display: grid;
-        grid-gap: 10px;
+        grid-gap: 12px;
         grid-template-columns: 1fr 1fr 1fr 1fr; }
     
     .sect-category {
@@ -347,6 +344,7 @@
       display: block;
       font-size: 18px;
       font-weight: bold;
+      margin-bottom: 25px;
       color: #000;
       text-decoration: none; }
     
@@ -401,7 +399,6 @@
   <!-- <link rel="stylesheet" href="css/app.css"> -->
 </head>
 <body>
-  <!-- begin sidebar  -->
   <amp-sidebar id="sidebar"
     width="100vw"
     layout="nodisplay"
@@ -480,9 +477,8 @@
      </ul>
     </nav>
   </amp-sidebar>
-  <!-- end sidebar -->
 
-  <!-- begin header  -->
+
   <header class="header">
     <div class="header__burger">
       <button on="tap:sidebar.toggle">
@@ -490,28 +486,21 @@
       </button>
     </div>
 
-    <!-- begin header__lang  -->
     <div class="header__lang" id="target-element-lang">
     </div>
-    <!-- end header__lang -->
 
-    <!-- begin header__search  -->
     <div class="header__search">
       <button>
         <svg style="enable-background:new 0 0 16 16;" version="1.1" viewBox="0 0 16 16" xml:space="preserve"><path fill="#ffffff" d="M11,0C8.243,0,6,2.243,6,5c0,1.198,0.441,2.284,1.146,3.147l-7,7l0.707,0.707l7-7C8.716,9.559,9.802,10,11,10  c2.757,0,5-2.243,5-5S13.757,0,11,0z M11,9C8.791,9,7,7.209,7,5c0-2.209,1.791-4,4-4s4,1.791,4,4C15,7.209,13.209,9,11,9z"/></svg>
       </button>
     </div>
-    <!-- end header__search -->
 
-    <!-- begin header__title  -->
     <div class="header__title">
       Українська правда
     </div>
-    <!-- end header__title -->
   </header>
-  <!-- end header -->
 
-  <!-- begin img  -->
+
   <div class="hero">
     <amp-img src="img/bg-img.jpg" layout="responsive" alt="Welcome" height="1000" width="1680"></amp-img>
 <div class="hero__wide-content">
@@ -529,9 +518,8 @@
     </div>
   </div>
   </div>
-  <!-- end img -->
+
   
-  <!-- begin content  -->
   <div class="content">
 
     <div class="content__info  container">
@@ -550,7 +538,6 @@
       </div>
     </div>
 
-    <!-- begin news  -->
     <article class="content__news  news">
       <div class="container-custom">
         <h3 class="news__title  title-news">2001, суббота</h3>
@@ -562,9 +549,7 @@
         </div>
       </div>
     </article>
-    <!-- end news -->
 
-    <!-- begin news  -->
     <article class="content__news  news">
       <div class="container-custom">
         <h3 class="news__title  title-news">2003, понеділок</h3>
@@ -575,9 +560,7 @@
         </div>
       </div>
     </article>
-    <!-- end news -->
 
-    <!-- begin news  -->
     <article class="content__news  news">
       <div class="container-custom">
         <h3 class="news__title  title-news">2013, неділя</h3>
@@ -602,9 +585,8 @@
         </div>
       </div>
     </article>
-    <!-- end news -->
 
-    <!-- begin news  -->
+
     <article class="content__news  news">
       <div class="container-custom">
       <h3 class="news__title  title-news">2014, понеділок</h3>
@@ -632,9 +614,8 @@
       </div>
     </div>
     </article>
-    <!-- end news -->
 
-    <!-- begin news  -->
+
     <article class="content__news  news">
       <div class="container-custom">
       <h3 class="news__title  title-news">2015, вівторок</h3>
@@ -644,10 +625,8 @@
       </div>
     </div>
     </article>
-    <!-- end news -->
 
 
-    <!-- begin news  -->
     <article class="content__news  news">
       <div class="container-custom">
       <h3 class="news__title  title-news">2016, четвер</h3>
@@ -661,10 +640,7 @@
       </div>
     </div>
     </article>
-    <!-- end news -->
 
-
-    <!-- begin sale-sect  -->
     <section class="content__list-news">
       <div class="list-news  container-custom">
         <h3 class="list-news__title  title-default  title-default--decor">По темі</h3>
@@ -687,18 +663,16 @@
         </amp-list>
       </div>
     </section>
-    <!-- end sale-sect -->
+
 
 
   </div>
-  <!-- end content -->
 
 
-<!-- begin sect-custom  -->
-<section class="sect-custom">
+<section class="select-editor">
   <div class="container">
     <div class="imglist">
-      <h3 class="sect-custom__title  title-default">Вибір редактора</h3>
+      <h3 class="select-editor__title  title-default">Вибір редактора</h3>
       <amp-list width="auto"
         height="100"
         layout="fixed-height"
@@ -720,15 +694,13 @@
     </div>
   </div>
 </section>
-<!-- end sect-custom -->
-
 
 <footer class="footer"> 
   <div class="container">
 
 
     <div> 
-      <div class="footer__info"> 
+      <div class="footer__text"> 
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora vitae blanditiis voluptate sint quidem pariatur doloremque dolorum aliquam, explicabo quaerat.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus maxime optio libero sit dolor! Porro illum deleniti quisquam nostrum saepe.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus maxime optio libero sit dolor! Porro illum deleniti quisquam nostrum saepe.</p>
